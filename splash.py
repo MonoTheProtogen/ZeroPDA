@@ -12,7 +12,9 @@ logo = [
     " Welcome " + getpass.getuser() + "!",                                              
 ]
 
-def splash(stdscr, duration=10):
+def splash(stdscr):
+    duration = 10
+    
     curses.curs_set(0)
     stdscr.clear()
     stdscr.nodelay(True)
@@ -73,7 +75,6 @@ def splash(stdscr, duration=10):
         pos = (pos + 1) % bar_width
         time.sleep(0.1)
 
-    curses.curs_set(1)
     stdscr.clear()
     stdscr.refresh()
 
